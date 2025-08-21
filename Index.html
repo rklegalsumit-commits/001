@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedBus Mockup - Scrollable Screenshots</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 360px; /* Mobile-like width */
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow-y: auto; /* Vertical scrolling */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 640px; /* Mobile-like height */
+      padding: 10px;
+      padding-bottom: 80px; /* Space for nav */
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .screenshot {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 20px; /* Space between images */
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
+
+    .clickable-image {
+      cursor: pointer; /* Indicate clickable image */
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      position: fixed;
+      bottom: 25px;   /* 👈 footer ke upar shift */
+      width: 100%;
+      max-width: 360px; /* Match container width */
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item {
+      text-align: center;
+      color: #666;
+      font-size: 10px; /* Smaller font for 5 items */
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .nav-item img {
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin: 0 auto 4px; /* Center and space below icon */
+    }
+
+    .nav-item.active {
+      color: #d84b37; /* RedBus red for active item */
+    }
+
+    .nav-item:hover {
+      color: #d84b37;
+    }
+
+    /* Footer */
+    .footer {
+      background: #d32f2f;   /* Red background */
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      padding: 5px 0;
+      width: 100%;           
+      position: fixed;       
+      bottom: 0;   /* 👈 Always sabse niche */
+      left: 0;
+    }
+
+    /* Ensure responsiveness */
+    @media (max-width: 400px) {
+      .app-container {
+        max-width: 100%;
+        height: 100vh; /* Full height on smaller screens */
+      }
+      .bottom-nav {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Replace src with your image paths -->
+    <img src="IMG 1.jpg" alt="Screenshot 1" class="screenshot">
+    <img src="IMG 2.jpg" alt="Screenshot 2" class="screenshot">
+    <img src="IMG 3.jpg" alt="Screenshot 3" class="screenshot">
+    <a href="test.html">
+      <img src="IMG 4.jpg" alt="Screenshot 4" class="screenshot clickable-image">
+    </a>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <a href="#" class="nav-item active">
+      <img src="ICON_1.png" alt="Bus Icon">
+      Bus
+    </a>
+    <a href="#" class="nav-item">
+      <img src="ICON 2.png" alt="Ticket Icon">
+      Ticket
+    </a>
+    <a href="#" class="nav-item">
+      <img src="ICON 3.png" alt="Hub Icon">
+      Hub
+    </a>
+    <a href="#" class="nav-item">
+      <img src="ICON_1.png" alt="Trip Plan Icon">
+      Trip Plan
+    </a>
+    <a href="#" class="nav-item">
+      <img src="ICON 5.png" alt="Help Icon">
+      Help
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Powered by IIIT-Delhi
+  </div>
+</body>
+</html>
