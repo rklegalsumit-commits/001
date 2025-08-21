@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Pass</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #1e73be; /* Blue background */
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 15px 10px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header .icon {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* ---------- WHITE BOXES ---------- */
+    .box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Passenger Details */
+    .passenger {
+      display: flex;
+      gap: 12px;
+    }
+
+    .passenger img {
+      width: 75px;
+      height: 75px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .details p {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    .details strong {
+      display: block;
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Pass Valid In - small bordered boxes */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      border: 1px solid #999;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .bus-icons {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0 14px; /* ✅ extra bottom space */
+    }
+
+    .bus-icons img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px; /* ✅ thoda radius */
+    }
+
+    /* Fare Section */
+    .fare {
+      margin-top: 15px;
+      text-align: left;
+    }
+
+    .fare strong {
+      display: block;
+      font-size: 13px;
+      color: #000;
+      margin-bottom: 3px;
+    }
+
+    .fare p {
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* ONDC logo center */
+    .ondc-logo {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .ondc-logo img {
+      width: 90px;
+      height: auto;
+    }
+
+    /* Show QR Code */
+    .qr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .qr img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .qr a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: black;
+    }
+    /* Footer */
+.footer {
+  background: #d32f2f;   /* Red background */
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 6px 0;
+  margin-top: 12px;
+  width: 100%;           /* Full width */
+  position: fixed;       /* Always bottom */
+  bottom: 0;
+  left: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="icon"><a href="Index.html" style="color:white;text-decoration:none;">✖</a></div>
+      <div class="header-left">⚠ Issue with Passes?</div>
+      <div>All Passes</div>
+    </div>
+
+    <!-- Passenger Box -->
+    <div class="box passenger">
+      <img src="PIC.jpg" alt="Passenger">
+      <div class="details">
+        <p><strong>Passenger Name</strong>Sumit Kumar Parihar</p>
+        <p><strong>Verification Document</strong>Aadhar Card - 2808</p>
+        <p><strong>Pass ID</strong>MP10052254760045675623</p>
+      </div>
+    </div>
+
+    <!-- Pass Info -->
+    <div class="box">
+      <p><strong>Pass Type</strong><br>MONTHLY GENERAL ALL ROUTE AC PASS</p>
+      <p style="margin-top:10px;"><strong>Pass Valid In</strong></p>
+      
+      <div class="tags">
+        <div class="tag">AC</div>
+        <div class="tag">NON-AC</div>
+        <div class="tag">ELECTRIC</div>
+        <div class="tag">ALL ROUTES <img src="BS 1.png" alt="bus" width="14"></div>
+      </div>
+
+      <div class="bus-icons">
+        <img src="BS 2.png" alt="bus">
+        <img src="BS 3.png" alt="bus">
+        <img src="BS 4.png" alt="bus">
+        <img src="BS 5.png" alt="bus">
+      </div>
+
+      <p><strong>Pass Valid From</strong><br>12 Aug, 25 | 10:58 AM</p>
+      <p style="margin-top:12px;"><strong>Pass Valid To</strong><br>10 Sep, 25 | 11:59 PM</p> <!-- ✅ extra top space -->
+
+      <!-- Fare Section -->
+      <div class="fare">
+        <strong>Pass Fare</strong>
+        <p>₹1000</p>
+      </div>
+
+      <!-- ONDC Logo Center -->
+      <div class="ondc-logo">
+        <img src="ondc.png" alt="ONDC Logo">
+      </div>
+    </div>
+
+    <!-- Show QR -->
+    <div class="box qr">
+      <a href="qrpage.html">
+        <img src="QR.png" alt="QR">
+        <span>Show QR Code</span>
+      </a>
+    </div>
+
+  </div>
+  <!-- Footer (Container ke bahar rakho) -->
+<div class="footer">
+  Powered by Sumit
+</div>
+
+</body>
+</html>
