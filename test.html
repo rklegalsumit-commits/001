@@ -17,7 +17,7 @@
       display: flex;
       justify-content: center;
       min-height: 100vh;
-      padding: 15px 10px;
+      padding: 15px 10px 80px; /* bottom padding for footer */
     }
 
     .container {
@@ -51,7 +51,7 @@
       background: #fff;
       border-radius: 10px;
       padding: 15px;
-      margin-bottom: 12px;
+      margin: 0 8px 14px 8px;   /* ✅ left-right extra space */
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
 
@@ -63,7 +63,7 @@
 
     .passenger img {
       width: 75px;
-      height: 75px;
+      height: 85px;  /* ✅ thoda lamba kiya */
       border-radius: 8px;
       object-fit: cover;
     }
@@ -108,7 +108,7 @@
     .bus-icons img {
       width: 28px;
       height: 28px;
-      border-radius: 6px; /* ✅ thoda radius */
+      border-radius: 6px;
     }
 
     /* Fare Section */
@@ -150,6 +150,7 @@
       gap: 8px;
       font-weight: bold;
       font-size: 14px;
+      margin-bottom: 100px; /* ✅ QR ke baad zyada space */
     }
 
     .qr img {
@@ -164,20 +165,19 @@
       text-decoration: none;
       color: black;
     }
-    /* Footer */
-.footer {
-  background: #d32f2f;   /* Red background */
-  color: white;
-  text-align: center;
-  font-size: 12px;
-  padding: 6px 0;
-  margin-top: 12px;
-  width: 100%;           /* Full width */
-  position: fixed;       /* Always bottom */
-  bottom: 0;
-  left: 0;
-}
 
+    /* Footer */
+    .footer {
+      background: #d32f2f;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      padding: 6px 0;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
   </style>
 </head>
 <body>
@@ -185,7 +185,7 @@
 
     <!-- Header -->
     <div class="header">
-      <div class="icon"><a href="index.html" style="color:white;text-decoration:none;">✖</a></div>
+      <div class="icon"><a href="Index.html" style="color:white;text-decoration:none;">✖</a></div>
       <div class="header-left">⚠ Issue with Passes?</div>
       <div>All Passes</div>
     </div>
@@ -220,7 +220,7 @@
       </div>
 
       <p><strong>Pass Valid From</strong><br>12 Aug, 25 | 10:58 AM</p>
-      <p style="margin-top:12px;"><strong>Pass Valid To</strong><br>10 Sep, 25 | 11:59 PM</p> <!-- ✅ extra top space -->
+      <p style="margin-top:12px;"><strong>Pass Valid To</strong><br>10 Sep, 25 | 11:59 PM</p>
 
       <!-- Fare Section -->
       <div class="fare">
@@ -243,12 +243,10 @@
     </div>
 
   </div>
-  <!-- Footer (Container ke bahar rakho) -->
-<div class="footer">
-  Powered by IIIT-Delhi
-</div>
 
+  <!-- Footer -->
+  <div class="footer">
+    Powered by IIIT-Delhi
+  </div>
 </body>
 </html>
-
-
