@@ -12,18 +12,34 @@
       font-family: Arial, sans-serif;
     }
 
-    body {
-      background: #1e73be; /* Blue background */
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 15px 10px 80px; /* bottom padding for footer */
-    }
+  body {
+  background: #1e73be;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .container {
   width: 100%;
   max-width: 420px;
-  padding-bottom: 60px; /* ✅ footer ke liye space reserve */
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 30px); /* footer ki height ke hisaab se adjust */
+  padding: 0 10px;
+  box-sizing: border-box;
 }
+
+.content {
+  flex: 1;                 /* ✅ take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.qr {
+  margin-top: auto  ;        /* ✅ last box automatically neeche push */
+}
+
 
     /* ---------- HEADER ---------- */
     .header {
@@ -185,7 +201,7 @@
 
     <!-- Header -->
     <div class="header">
-      <div class="icon"><a href="Index.html" style="color:white;text-decoration:none;">✖</a></div>
+      <div class="icon"><a href="index.html" style="color:white;text-decoration:none;">✖</a></div>
       <div class="header-left">⚠ Issue with Passes?</div>
       <div>All Passes</div>
     </div>
@@ -250,3 +266,4 @@
   </div>
 </body>
 </html>
+
